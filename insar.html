@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="InSAR case study by Dinmukhamed Assylbek — Sentinel-1 ground deformation monitoring in Almaty.">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:title" content="InSAR Case Study — Dinmukhamed Assylbek">
+  <meta property="og:description" content="Sentinel-1 DInSAR workflow, coherence analysis and deformation mapping.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://dinmukhamedassylbek-cmd.github.io/insar.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=3.0">
+  <title>InSAR Case Study — Dinmukhamed Assylbek</title>
+</head>
+<body class="case-page">
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header case-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">DA</span>
+      <span class="brand-copy"><strong>Dinmukhamed Assylbek</strong><small>InSAR Case Study</small></span>
+    </a>
+    <nav class="case-nav">
+      <a href="index.html">← Portfolio</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#results">Results</a>
+      <a href="#next">Next steps</a>
+    </nav>
+    <div class="header-actions">
+      <button class="mini-btn" id="langToggle" type="button">RU</button>
+      <button class="mini-btn" id="themeToggle" type="button">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero section">
+      <div class="case-hero-copy reveal">
+        <p class="eyebrow" data-en="Case study · Sentinel-1 · InSAR"
+           data-ru="Case study · Sentinel-1 · InSAR">Case study · Sentinel-1 · InSAR</p>
+        <h1 data-en="Ground deformation monitoring with short-revisit Sentinel-1 data"
+            data-ru="Мониторинг деформаций поверхности по данным Sentinel‑1 с коротким интервалом повторной съёмки">
+          Ground deformation monitoring with short-revisit Sentinel-1 data
+        </h1>
+        <p class="case-lead"
+           data-en="A practical DInSAR workflow for the Almaty area, moving from SLC scenes to coherence and geocoded displacement products."
+           data-ru="Практический DInSAR-пайплайн для территории Алматы: от SLC-сцен до когерентности и геокодированных продуктов смещения.">
+          A practical DInSAR workflow for the Almaty area, moving from SLC scenes to coherence and geocoded displacement products.
+        </p>
+        <div class="tags hero-tags">
+          <span>Sentinel‑1 IW SLC</span><span>Descending orbit</span><span>SNAP</span><span>SNAPHU</span><span>QGIS</span>
+        </div>
+      </div>
+
+      <div class="case-summary-grid reveal">
+        <div><span data-en="Study area" data-ru="Территория">Study area</span><strong>Almaty, Kazakhstan</strong></div>
+        <div><span data-en="Method" data-ru="Метод">Method</span><strong>DInSAR / time-series direction</strong></div>
+        <div><span data-en="Data" data-ru="Данные">Data</span><strong>Sentinel‑1 IW SLC DV</strong></div>
+        <div><span data-en="Output" data-ru="Результат">Output</span><strong>Displacement · coherence · GeoTIFF</strong></div>
+      </div>
+    </section>
+
+    <section class="section case-two-col">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-en="Problem" data-ru="Задача">Problem</p>
+        <h2 data-en="How can repeated SAR observations reveal small surface changes?"
+            data-ru="Как повторные SAR-наблюдения позволяют выявлять небольшие изменения поверхности?">
+          How can repeated SAR observations reveal small surface changes?
+        </h2>
+      </div>
+      <div class="case-copy reveal">
+        <p data-en="Interferometric SAR compares the phase of repeated radar acquisitions. After geometric alignment and removal of known phase components, the residual phase can be related to line-of-sight displacement — provided that coherence is sufficient and the phase is correctly unwrapped."
+           data-ru="Интерферометрическая SAR-обработка сравнивает фазу повторных радиолокационных съёмок. После геометрического совмещения и удаления известных фазовых составляющих остаточная фаза может быть связана со смещением вдоль линии визирования — при достаточной когерентности и корректной развёртке фазы.">
+          Interferometric SAR compares the phase of repeated radar acquisitions. After geometric alignment and removal of known phase components, the residual phase can be related to line-of-sight displacement — provided that coherence is sufficient and the phase is correctly unwrapped.
+        </p>
+        <p data-en="The project focuses on a reproducible processing chain and on understanding how short revisit intervals influence coherence and the reliability of deformation products."
+           data-ru="Проект сосредоточен на воспроизводимом пайплайне и на анализе того, как короткие интервалы повторной съёмки влияют на когерентность и надёжность деформационных продуктов.">
+          The project focuses on a reproducible processing chain and on understanding how short revisit intervals influence coherence and the reliability of deformation products.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Dataset" data-ru="Данные">Dataset</p>
+        <h2 data-en="Sentinel-1 IW SLC scenes over Almaty."
+            data-ru="Sentinel‑1 IW SLC-сцены над Алматы.">
+          Sentinel-1 IW SLC scenes over Almaty.
+        </h2>
+      </div>
+
+      <div class="case-data-grid reveal">
+        <article class="case-data-card"><span>AOI</span><strong>≈ 76.5–77.3°E · 43.0–43.5°N</strong><p data-en="Almaty and surrounding area." data-ru="Алматы и прилегающая территория.">Almaty and surrounding area.</p></article>
+        <article class="case-data-card"><span>Orbit</span><strong>34 · Descending</strong><p data-en="Consistent acquisition geometry for pair comparison." data-ru="Стабильная геометрия съёмки для сравнения пар.">Consistent acquisition geometry for pair comparison.</p></article>
+        <article class="case-data-card"><span>Product</span><strong>S1A IW SLC 1SDV</strong><p data-en="Complex SAR data required for interferometric phase analysis." data-ru="Комплексные SAR-данные, необходимые для фазового интерферометрического анализа.">Complex SAR data required for interferometric phase analysis.</p></article>
+        <article class="case-data-card"><span>Comparison</span><strong>12 / 24 / 36 days</strong><p data-en="Used to observe coherence behavior with different revisit intervals." data-ru="Использовано для анализа поведения когерентности при разных интервалах повторной съёмки.">Used to observe coherence behavior with different revisit intervals.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Processing workflow" data-ru="Пайплайн обработки">Processing workflow</p>
+        <h2 data-en="From raw SLC scenes to displacement."
+            data-ru="От исходных SLC-сцен до карты смещений.">
+          From raw SLC scenes to displacement.
+        </h2>
+      </div>
+
+      <div class="workflow-list reveal">
+        <article><span>01</span><div><h3>TOPSAR Split</h3><p data-en="Select the required subswath, polarization and bursts covering the study area."
+        data-ru="Выбор нужного subswath, поляризации и burst, покрывающих исследуемую территорию.">Select the required subswath, polarization and bursts covering the study area.</p></div></article>
+        <article><span>02</span><div><h3>Apply Orbit File</h3><p data-en="Improve satellite orbit information before precise co-registration."
+        data-ru="Уточнение орбитальной информации перед точным совмещением сцен.">Improve satellite orbit information before precise co-registration.</p></div></article>
+        <article><span>03</span><div><h3>Back-Geocoding + ESD</h3><p data-en="Co-register master and slave data and refine burst alignment."
+        data-ru="Совмещение master/slave данных и уточнение выравнивания burst.">Co-register master and slave data and refine burst alignment.</p></div></article>
+        <article><span>04</span><div><h3>TOPSAR Deburst</h3><p data-en="Merge burst boundaries into a continuous image for subsequent processing."
+        data-ru="Объединение burst в непрерывное изображение для дальнейшей обработки.">Merge burst boundaries into a continuous image for subsequent processing.</p></div></article>
+        <article><span>05</span><div><h3>Interferogram + coherence</h3><p data-en="Form interferometric phase and estimate coherence as a key quality indicator."
+        data-ru="Построение интерферометрической фазы и оценка когерентности как ключевого показателя качества.">Form interferometric phase and estimate coherence as a key quality indicator.</p></div></article>
+        <article><span>06</span><div><h3>Topographic phase removal</h3><p data-en="Use a DEM to remove the phase contribution caused by topography."
+        data-ru="Использование DEM для удаления фазовой составляющей, обусловленной рельефом.">Use a DEM to remove the phase contribution caused by topography.</p></div></article>
+        <article><span>07</span><div><h3>SNAPHU unwrapping</h3><p data-en="Convert wrapped phase into a continuous phase field."
+        data-ru="Преобразование циклической фазы в непрерывное фазовое поле.">Convert wrapped phase into a continuous phase field.</p></div></article>
+        <article><span>08</span><div><h3>Phase to displacement</h3><p data-en="Transform unwrapped phase into line-of-sight displacement."
+        data-ru="Преобразование развёрнутой фазы в смещение вдоль линии визирования.">Transform unwrapped phase into line-of-sight displacement.</p></div></article>
+        <article><span>09</span><div><h3>Terrain Correction + GeoTIFF</h3><p data-en="Geocode the result for GIS analysis and presentation."
+        data-ru="Геокодирование результата для GIS-анализа и визуализации.">Geocode the result for GIS analysis and presentation.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Current results" data-ru="Текущие результаты">Current results</p>
+        <h2 data-en="Pair-based DInSAR results form the baseline for the next stage."
+            data-ru="Результаты парного DInSAR стали базой для следующего этапа.">
+          Pair-based DInSAR results form the baseline for the next stage.
+        </h2>
+      </div>
+
+      <div class="results-grid reveal">
+        <article class="result-card">
+          <strong data-en="Coherence masking" data-ru="Маскирование по когерентности">Coherence masking</strong>
+          <span>0.4 threshold</span>
+          <p data-en="Low-coherence areas can be excluded before interpreting displacement."
+             data-ru="Области с низкой когерентностью исключаются перед интерпретацией смещений.">
+            Low-coherence areas can be excluded before interpreting displacement.
+          </p>
+        </article>
+        <article class="result-card">
+          <strong data-en="Pair comparison" data-ru="Сравнение пар">Pair comparison</strong>
+          <span>12 · 24 · 36 days</span>
+          <p data-en="Shorter temporal separation was used to study its effect on coherence and result stability."
+             data-ru="Более короткий временной интервал использовался для анализа его влияния на когерентность и стабильность результата.">
+            Shorter temporal separation was used to study its effect on coherence and result stability.
+          </p>
+        </article>
+        <article class="result-card">
+          <strong data-en="Displacement visualization" data-ru="Визуализация смещений">Displacement visualization</strong>
+          <span>≈ −0.025 to +0.025 m</span>
+          <p data-en="A compact visualization range was used for pair-based deformation comparison."
+             data-ru="Для сопоставления пар использовался компактный диапазон визуализации деформаций.">
+            A compact visualization range was used for pair-based deformation comparison.
+          </p>
+        </article>
+      </div>
+
+      <div class="visual-placeholder reveal">
+        <div>
+          <span>VISUAL 01</span>
+          <h3 data-en="Displacement map" data-ru="Карта смещений">Displacement map</h3>
+          <p data-en="Next update: insert the final terrain-corrected displacement map here."
+             data-ru="Следующее обновление: сюда вставим финальную terrain-corrected карту смещений.">
+            Next update: insert the final terrain-corrected displacement map here.
+          </p>
+        </div>
+        <div>
+          <span>VISUAL 02</span>
+          <h3 data-en="Coherence comparison" data-ru="Сравнение когерентности">Coherence comparison</h3>
+          <p data-en="Next update: add the 12/24/36-day coherence comparison figure."
+             data-ru="Следующее обновление: добавим сравнение когерентности для 12/24/36 дней.">
+            Next update: add the 12/24/36-day coherence comparison figure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="next">
+      <div class="next-card reveal">
+        <p class="eyebrow" data-en="Next stage" data-ru="Следующий этап">Next stage</p>
+        <h2 data-en="From pair-based DInSAR to multi-scene time-series analysis."
+            data-ru="От парного DInSAR к многосценовому анализу временных рядов.">
+          From pair-based DInSAR to multi-scene time-series analysis.
+        </h2>
+        <p data-en="The next development step is a larger Sentinel-1 scene stack and an SBAS/PS-InSAR-oriented workflow, followed by intelligent interpretation of deformation time series."
+           data-ru="Следующий этап — расширенный стек Sentinel‑1 и пайплайн в направлении SBAS/PS-InSAR, а затем интеллектуальная интерпретация временных рядов деформаций.">
+          The next development step is a larger Sentinel-1 scene stack and an SBAS/PS-InSAR-oriented workflow, followed by intelligent interpretation of deformation time series.
+        </p>
+        <a class="btn btn-primary" href="index.html#contact" data-en="Discuss the research" data-ru="Обсудить исследование">Discuss the research</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Dinmukhamed Assylbek</strong><span>InSAR Case Study</span></div>
+    <p>© <span id="year"></span></p>
+    <a href="index.html">← Portfolio</a>
+  </footer>
+
+  <script src="app.js?v=3.0"></script>
+</body>
+</html>
