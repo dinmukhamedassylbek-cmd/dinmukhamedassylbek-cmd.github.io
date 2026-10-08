@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Assylbek Dinmukhamed Kuanyshuly — researcher and engineer working with InSAR, Sentinel-1, signal processing, GIS and embedded systems." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta property="og:title" content="Assylbek Dinmukhamed — Portfolio" />
+  <meta property="og:description" content="Research, engineering and projects in InSAR, signal processing, GIS and embedded systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photo.jpg" />
+  <title>Assylbek Dinmukhamed — Researcher & Engineer</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Home">
+      <span class="brand-mark">AD</span>
+      <span class="brand-text">Assylbek Dinmukhamed</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-icon">◐</span>
+    </button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Research • Engineering • Remote sensing</p>
+        <h1>
+          Hi, I'm <span class="gradient-text">Assylbek.</span><br />
+          I turn signals and satellite data into useful information.
+        </h1>
+        <p class="hero-subtitle">
+          Electronics & communication technologies researcher working with
+          <span id="typingText" class="typing">InSAR</span><span class="caret">|</span>
+        </p>
+        <p class="hero-description">
+          My work combines Sentinel-1 remote sensing, signal processing, GIS,
+          MATLAB/Python workflows and practical electronics.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="mailto:dinmukhamedassylbek@gmail.com">Contact me</a>
+        </div>
+
+        <div class="hero-meta">
+          <div><strong>Based in</strong><span>Almaty, Kazakhstan</span></div>
+          <div><strong>Focus</strong><span>InSAR · DSP · GIS</span></div>
+          <div><strong>Status</strong><span>Research & engineering</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="portrait-shell">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="portrait-frame">
+            <img src="assets/photo.jpg" alt="Portrait of Assylbek Dinmukhamed" />
+          </div>
+          <div class="floating-card fc-one">
+            <span class="dot"></span>
+            Sentinel-1 / InSAR
+          </div>
+          <div class="floating-card fc-two">MATLAB + Python</div>
+          <div class="floating-card fc-three">Signal processing</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-grid">
+      <div class="section-heading reveal">
+        <p class="eyebrow">About</p>
+        <h2>From an old student portfolio to a real research profile.</h2>
+      </div>
+      <div class="section-body reveal">
+        <p>
+          I work at the intersection of electronics, communication technologies,
+          remote sensing and data processing. My recent research focuses on
+          short-revisit Sentinel-1 InSAR for monitoring ground deformation.
+        </p>
+        <p>
+          I also build and test signal-processing and embedded-system projects,
+          including satellite signal analysis, SDR workflows and ESP32-based RF experiments.
+        </p>
+        <div class="mini-cards">
+          <article>
+            <span>01</span>
+            <h3>Research</h3>
+            <p>InSAR, Sentinel-1, deformation monitoring and time-series analysis.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Engineering</h3>
+            <p>DSP, MATLAB/Python, SDR, electronics and embedded development.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Visualization</h3>
+            <p>GIS, QGIS, scientific figures and clear technical presentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools I use to go from raw data to a working result.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-icon">SAR</div>
+          <h3>Remote sensing</h3>
+          <p>Sentinel-1 SLC, DInSAR, SBAS concepts, coherence, unwrapping and displacement mapping.</p>
+          <div class="tags"><span>Sentinel-1</span><span>SNAP</span><span>SNAPHU</span></div>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">DSP</div>
+          <h3>Signal processing</h3>
+          <p>Array processing, AoA estimation, ESPRIT workflows, filtering and numerical analysis.</p>
+          <div class="tags"><span>MATLAB</span><span>Python</span><span>SDR</span></div>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">GIS</div>
+          <h3>Geospatial</h3>
+          <p>Raster/vector processing, map preparation, coordinate systems and deformation products.</p>
+          <div class="tags"><span>QGIS</span><span>GeoTIFF</span><span>GIS</span></div>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">HW</div>
+          <h3>Embedded & hardware</h3>
+          <p>ESP32/ESP8266, RF modules, prototyping, debugging and practical electronics.</p>
+          <div class="tags"><span>ESP32</span><span>Arduino</span><span>RF</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected projects</p>
+        <h2>Research and engineering projects with a practical outcome.</h2>
+      </div>
+
+      <div class="project-filter reveal" role="group" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+        <button class="filter-btn" data-filter="signal">Signal</button>
+        <button class="filter-btn" data-filter="hardware">Hardware</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal" data-category="research">
+          <div class="project-number">01</div>
+          <p class="project-type">Research · InSAR</p>
+          <h3>Ground deformation monitoring with Sentinel-1</h3>
+          <p>
+            A processing workflow for short-revisit SAR data: co-registration,
+            interferogram generation, topographic phase removal, unwrapping,
+            displacement estimation and terrain correction.
+          </p>
+          <div class="tags"><span>Sentinel-1</span><span>SNAP</span><span>InSAR</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="signal">
+          <div class="project-number">02</div>
+          <p class="project-type">Signal processing · Positioning</p>
+          <h3>2D-ESPRIT self-localization using satellite signals</h3>
+          <p>
+            AoA estimation with planar antenna arrays and multi-satellite
+            intersection for receiver position estimation using signals of opportunity.
+          </p>
+          <div class="tags"><span>2D-ESPRIT</span><span>MATLAB</span><span>AoA</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="hardware">
+          <div class="project-number">03</div>
+          <p class="project-type">Embedded systems · RF</p>
+          <h3>ESP32 + CC1101 RF experiments</h3>
+          <p>
+            A compact experimental platform combining an ESP32, CC1101, Wi-Fi/BLE,
+            local controls and logging for passive RF analysis and lab work.
+          </p>
+          <div class="tags"><span>ESP32</span><span>CC1101</span><span>Embedded</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="research">
+          <div class="project-number">04</div>
+          <p class="project-type">Scientific communication</p>
+          <h3>Research publication & technical presentation</h3>
+          <p>
+            Preparation of scientific figures, workflows, conference material and
+            technical presentations around Sentinel-1 deformation monitoring.
+          </p>
+          <div class="tags"><span>Research</span><span>Writing</span><span>Visualization</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-grid">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Education and research trajectory.</h2>
+      </div>
+      <div class="timeline reveal">
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Current</div>
+          <h3>Research in electronics & communication technologies</h3>
+          <p>Focus: intelligent InSAR analysis, near-real-time monitoring and signal/data processing.</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024–2026</div>
+          <h3>Master's studies / international research experience</h3>
+          <p>Work across communications, signal processing and Sentinel-1 InSAR research.</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020–2024</div>
+          <h3>Bachelor's studies</h3>
+          <p>Engineering background with technology, entrepreneurship and practical project work.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Process</p>
+        <h2>How I usually approach a technical problem.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-card reveal"><span>01</span><h3>Define</h3><p>Turn the problem into measurable technical requirements.</p></article>
+        <article class="process-card reveal"><span>02</span><h3>Build</h3><p>Create the processing chain, prototype or experiment.</p></article>
+        <article class="process-card reveal"><span>03</span><h3>Validate</h3><p>Check assumptions against data, metrics and repeatable tests.</p></article>
+        <article class="process-card reveal"><span>04</span><h3>Explain</h3><p>Present the result so another person can reproduce and use it.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Have a research idea, engineering task or collaboration in mind?</h2>
+        <p>The easiest way to reach me is by email.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:dinmukhamedassylbek@gmail.com">Send email</a>
+          <button class="btn btn-ghost" id="copyEmail" type="button">Copy email</button>
+        </div>
+        <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Assylbek Dinmukhamed Kuanyshuly.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
