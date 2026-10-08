@@ -1,11 +1,17 @@
-# Dinmukhamed Assylbek — Portfolio v2
+# Dinmukhamed Assylbek — Portfolio V3
 
-Public URL:
-https://dinmukhamedassylbek-cmd.github.io/
+Main changes:
+- 2D-ESPRIT removed from the public portfolio.
+- InSAR / Sentinel-1 is now the primary research focus.
+- Added a full standalone InSAR case-study page: `insar.html`.
+- Project list now contains only topics that can be presented confidently.
+- Added placeholders for real InSAR visuals that can be replaced later with actual maps/figures.
+- Cache-busting updated to `?v=3.0`.
 
-## Upload
-Upload these files directly to the repository root:
+## Upload to GitHub
+Upload these files to the repository root and replace the old versions:
 - index.html
+- insar.html
 - styles.css
 - app.js
 - photo.jpg
@@ -13,20 +19,5 @@ Upload these files directly to the repository root:
 - robots.txt
 - sitemap.xml
 
-Do not put them inside another folder.
-
-This version includes:
-- Correct public name: Dinmukhamed Assylbek
-- English / Russian language switch
-- Dark / light theme
-- Responsive mobile navigation
-- Project filters
-- Project detail modal windows
-- Scroll-reveal animations
-- Hero typing animation
-- Publications section
-- Education timeline
-- Current research section
-- SEO / OpenGraph metadata
-- Schema.org Person markup
-- Cache-busting query strings (`?v=2.0`)
+The public site remains:
+https://dinmukhamedassylbek-cmd.github.io/
