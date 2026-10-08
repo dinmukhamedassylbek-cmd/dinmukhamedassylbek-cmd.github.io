@@ -1,24 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Assylbek Dinmukhamed Kuanyshuly — researcher and engineer working with InSAR, Sentinel-1, signal processing, GIS and embedded systems." />
-  <meta name="theme-color" content="#0b1020" />
-  <meta property="og:title" content="Assylbek Dinmukhamed — Portfolio" />
-  <meta property="og:description" content="Research, engineering and projects in InSAR, signal processing, GIS and embedded systems." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="photo.jpg" />
-  <title>Assylbek Dinmukhamed — Researcher & Engineer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Personal research and engineering portfolio of Dinmukhamed Assylbek — InSAR, Sentinel-1, signal processing, GIS and embedded systems.">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:title" content="Dinmukhamed Assylbek — Research & Engineering">
+  <meta property="og:description" content="InSAR, Sentinel-1, signal processing, GIS and embedded systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dinmukhamedassylbek-cmd.github.io/">
+  <meta property="og:image" content="https://dinmukhamedassylbek-cmd.github.io/photo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=2.0">
+  <title>Dinmukhamed Assylbek — Researcher & Engineer</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dinmukhamed Assylbek",
+    "url": "https://dinmukhamedassylbek-cmd.github.io/",
+    "image": "https://dinmukhamedassylbek-cmd.github.io/photo.jpg",
+    "jobTitle": "Researcher in Electronics and Communication Technologies",
+    "email": "mailto:dinmukhamedassylbek@gmail.com",
+    "sameAs": [
+      "https://github.com/dinmukhamedassylbek-cmd"
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <div class="noise" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Home">
-      <span class="brand-mark">AD</span>
-      <span class="brand-text">Assylbek Dinmukhamed</span>
+      <span class="brand-mark">DA</span>
+      <span class="brand-copy">
+        <strong>Dinmukhamed Assylbek</strong>
+        <small data-en="Research & Engineering" data-ru="Исследования и инженерия">Research & Engineering</small>
+      </span>
     </a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
@@ -26,243 +50,349 @@
     </button>
 
     <nav class="nav" id="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-en="About" data-ru="Обо мне">About</a>
+      <a href="#research" data-en="Research" data-ru="Исследования">Research</a>
+      <a href="#projects" data-en="Projects" data-ru="Проекты">Projects</a>
+      <a href="#publications" data-en="Publications" data-ru="Публикации">Publications</a>
+      <a href="#education" data-en="Education" data-ru="Образование">Education</a>
+      <a href="#contact" data-en="Contact" data-ru="Контакты">Contact</a>
     </nav>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span class="theme-icon">◐</span>
-    </button>
+    <div class="header-actions">
+      <button class="mini-btn" id="langToggle" type="button" aria-label="Change language">RU</button>
+      <button class="mini-btn theme-btn" id="themeToggle" type="button" aria-label="Change theme">◐</button>
+    </div>
   </header>
 
   <main>
-    <section id="home" class="hero section">
+    <section class="hero section" id="home">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Research • Engineering • Remote sensing</p>
+        <p class="eyebrow" data-en="Electronics · Communication technologies · Remote sensing"
+           data-ru="Электроника · Коммуникационные технологии · ДЗЗ">
+          Electronics · Communication technologies · Remote sensing
+        </p>
+
         <h1>
-          Hi, I'm <span class="gradient-text">Assylbek.</span><br />
-          I turn signals and satellite data into useful information.
+          <span data-en="Hi, I'm" data-ru="Привет, я">Hi, I'm</span><br>
+          <span class="gradient-text">Dinmukhamed Assylbek.</span>
         </h1>
-        <p class="hero-subtitle">
-          Electronics & communication technologies researcher working with
+
+        <p class="hero-role" data-en="Researcher & engineer working with"
+           data-ru="Исследователь и инженер. Работаю с">
+          Researcher & engineer working with
           <span id="typingText" class="typing">InSAR</span><span class="caret">|</span>
         </p>
-        <p class="hero-description">
-          My work combines Sentinel-1 remote sensing, signal processing, GIS,
-          MATLAB/Python workflows and practical electronics.
+
+        <p class="hero-description"
+           data-en="I work at the intersection of satellite remote sensing, signal processing, GIS and communication technologies — from Sentinel-1 deformation analysis to satellite-signal positioning and embedded RF experiments."
+           data-ru="Я работаю на стыке спутникового дистанционного зондирования, обработки сигналов, GIS и коммуникационных технологий — от анализа деформаций Sentinel‑1 до позиционирования по спутниковым сигналам и embedded RF‑экспериментов.">
+          I work at the intersection of satellite remote sensing, signal processing, GIS and communication technologies — from Sentinel-1 deformation analysis to satellite-signal positioning and embedded RF experiments.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View projects</a>
-          <a class="btn btn-ghost" href="mailto:dinmukhamedassylbek@gmail.com">Contact me</a>
+          <a class="btn btn-primary" href="#projects" data-en="Explore projects" data-ru="Смотреть проекты">Explore projects</a>
+          <a class="btn btn-ghost" href="mailto:dinmukhamedassylbek@gmail.com?subject=Portfolio%20contact" data-en="Contact me" data-ru="Связаться со мной">Contact me</a>
+          <a class="btn btn-link" href="mailto:dinmukhamedassylbek@gmail.com?subject=CV%20request" data-en="Request CV ↗" data-ru="Запросить CV ↗">Request CV ↗</a>
         </div>
 
-        <div class="hero-meta">
-          <div><strong>Based in</strong><span>Almaty, Kazakhstan</span></div>
-          <div><strong>Focus</strong><span>InSAR · DSP · GIS</span></div>
-          <div><strong>Status</strong><span>Research & engineering</span></div>
+        <div class="hero-metrics">
+          <div>
+            <strong>InSAR</strong>
+            <span data-en="Ground deformation" data-ru="Деформации поверхности">Ground deformation</span>
+          </div>
+          <div>
+            <strong>2D-ESPRIT</strong>
+            <span data-en="Satellite positioning" data-ru="Спутниковое позиционирование">Satellite positioning</span>
+          </div>
+          <div>
+            <strong>MATLAB · Python</strong>
+            <span data-en="Research workflows" data-ru="Исследовательские пайплайны">Research workflows</span>
+          </div>
         </div>
       </div>
 
       <div class="hero-visual reveal">
-        <div class="portrait-shell">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
+        <div class="portrait-shell" id="portraitShell">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
           <div class="portrait-frame">
-            <img src="photo.jpg" alt="Portrait of Assylbek Dinmukhamed" />
+            <img src="photo.jpg?v=2.0" alt="Dinmukhamed Assylbek">
           </div>
-          <div class="floating-card fc-one">
-            <span class="dot"></span>
-            Sentinel-1 / InSAR
-          </div>
-          <div class="floating-card fc-two">MATLAB + Python</div>
-          <div class="floating-card fc-three">Signal processing</div>
+          <div class="floating-chip chip-a">Sentinel‑1</div>
+          <div class="floating-chip chip-b">InSAR</div>
+          <div class="floating-chip chip-c">DSP</div>
+          <div class="floating-chip chip-d">GIS</div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-grid">
+    <section id="about" class="section section-split">
       <div class="section-heading reveal">
-        <p class="eyebrow">About</p>
-        <h2>From an old student portfolio to a real research profile.</h2>
+        <p class="eyebrow" data-en="About" data-ru="Обо мне">About</p>
+        <h2 data-en="A researcher who likes to connect theory with working systems."
+            data-ru="Исследователь, который любит превращать теорию в работающие системы.">
+          A researcher who likes to connect theory with working systems.
+        </h2>
       </div>
-      <div class="section-body reveal">
-        <p>
-          I work at the intersection of electronics, communication technologies,
-          remote sensing and data processing. My recent research focuses on
-          short-revisit Sentinel-1 InSAR for monitoring ground deformation.
+
+      <div class="section-copy reveal">
+        <p data-en="My background combines electronics, communication technologies, signal processing and geospatial analysis. I prefer practical workflows where raw measurements become interpretable results."
+           data-ru="Мой профиль объединяет электронику, коммуникационные технологии, обработку сигналов и геопространственный анализ. Мне ближе практические пайплайны, где сырые измерения превращаются в понятный результат.">
+          My background combines electronics, communication technologies, signal processing and geospatial analysis. I prefer practical workflows where raw measurements become interpretable results.
         </p>
-        <p>
-          I also build and test signal-processing and embedded-system projects,
-          including satellite signal analysis, SDR workflows and ESP32-based RF experiments.
+
+        <p data-en="Current work: intelligent InSAR analysis with short-revisit SAR data for near-real-time monitoring of ground dynamics."
+           data-ru="Текущая работа: интеллектуальный анализ InSAR по SAR-данным с коротким интервалом повторной съёмки для мониторинга динамики поверхности в режиме, близком к реальному времени.">
+          Current work: intelligent InSAR analysis with short-revisit SAR data for near-real-time monitoring of ground dynamics.
         </p>
-        <div class="mini-cards">
-          <article>
-            <span>01</span>
-            <h3>Research</h3>
-            <p>InSAR, Sentinel-1, deformation monitoring and time-series analysis.</p>
+
+        <div class="fact-grid">
+          <article class="fact-card">
+            <span class="fact-label" data-en="Location" data-ru="Город">Location</span>
+            <strong>Almaty, Kazakhstan</strong>
           </article>
-          <article>
-            <span>02</span>
-            <h3>Engineering</h3>
-            <p>DSP, MATLAB/Python, SDR, electronics and embedded development.</p>
+          <article class="fact-card">
+            <span class="fact-label" data-en="Main field" data-ru="Основное направление">Main field</span>
+            <strong>Electronics & Communication Technologies</strong>
           </article>
-          <article>
-            <span>03</span>
-            <h3>Visualization</h3>
-            <p>GIS, QGIS, scientific figures and clear technical presentation.</p>
+          <article class="fact-card">
+            <span class="fact-label" data-en="Approach" data-ru="Подход">Approach</span>
+            <strong data-en="Research + implementation" data-ru="Исследование + реализация">Research + implementation</strong>
+          </article>
+          <article class="fact-card">
+            <span class="fact-label" data-en="Languages" data-ru="Языки">Languages</span>
+            <strong>KZ · RU · EN</strong>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Skills</p>
-        <h2>Tools I use to go from raw data to a working result.</h2>
+    <section id="research" class="section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Current research" data-ru="Текущие исследования">Current research</p>
+        <h2 data-en="Short-revisit InSAR for intelligent ground-dynamics monitoring."
+            data-ru="InSAR с коротким интервалом повторной съёмки для интеллектуального мониторинга динамики поверхности.">
+          Short-revisit InSAR for intelligent ground-dynamics monitoring.
+        </h2>
       </div>
 
-      <div class="skills-grid">
-        <article class="skill-card reveal">
-          <div class="skill-icon">SAR</div>
-          <h3>Remote sensing</h3>
-          <p>Sentinel-1 SLC, DInSAR, SBAS concepts, coherence, unwrapping and displacement mapping.</p>
-          <div class="tags"><span>Sentinel-1</span><span>SNAP</span><span>SNAPHU</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <div class="skill-icon">DSP</div>
-          <h3>Signal processing</h3>
-          <p>Array processing, AoA estimation, ESPRIT workflows, filtering and numerical analysis.</p>
-          <div class="tags"><span>MATLAB</span><span>Python</span><span>SDR</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <div class="skill-icon">GIS</div>
-          <h3>Geospatial</h3>
-          <p>Raster/vector processing, map preparation, coordinate systems and deformation products.</p>
-          <div class="tags"><span>QGIS</span><span>GeoTIFF</span><span>GIS</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <div class="skill-icon">HW</div>
-          <h3>Embedded & hardware</h3>
-          <p>ESP32/ESP8266, RF modules, prototyping, debugging and practical electronics.</p>
-          <div class="tags"><span>ESP32</span><span>Arduino</span><span>RF</span></div>
-        </article>
+      <div class="research-feature reveal">
+        <div class="research-copy">
+          <span class="status-pill"><span></span><span data-en="Active research direction" data-ru="Активное направление">Active research direction</span></span>
+          <h3>High revisit time InSAR Intelligent Analysis for Near Real Time Monitoring of Ground Dynamics</h3>
+          <p data-en="The research direction combines Sentinel-1 SAR processing, interferometry, time-series analysis and intelligent interpretation of deformation signals. The long-term goal is to reduce the gap between satellite acquisition and actionable deformation information."
+             data-ru="Направление объединяет обработку Sentinel‑1 SAR, интерферометрию, анализ временных рядов и интеллектуальную интерпретацию деформационных сигналов. Долгосрочная цель — сократить время между спутниковой съёмкой и получением полезной информации о деформациях.">
+            The research direction combines Sentinel-1 SAR processing, interferometry, time-series analysis and intelligent interpretation of deformation signals. The long-term goal is to reduce the gap between satellite acquisition and actionable deformation information.
+          </p>
+          <div class="tags">
+            <span>Sentinel‑1</span><span>InSAR</span><span>SBAS</span><span>Time series</span><span>Near real time</span>
+          </div>
+        </div>
+
+        <div class="research-pipeline" aria-label="Research pipeline">
+          <div><span>01</span><strong>SAR data</strong><small>Sentinel‑1 SLC</small></div>
+          <div><span>02</span><strong>Interferometry</strong><small>Co-registration · Ifg · Coherence</small></div>
+          <div><span>03</span><strong>Unwrapping</strong><small>SNAPHU · displacement</small></div>
+          <div><span>04</span><strong>Time series</strong><small>SBAS / PS concepts</small></div>
+          <div><span>05</span><strong>Interpretation</strong><small>Ground dynamics</small></div>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Selected projects</p>
-        <h2>Research and engineering projects with a practical outcome.</h2>
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Selected projects" data-ru="Избранные проекты">Selected projects</p>
+        <h2 data-en="Research and engineering projects with measurable outputs."
+            data-ru="Исследовательские и инженерные проекты с измеримым результатом.">
+          Research and engineering projects with measurable outputs.
+        </h2>
       </div>
 
-      <div class="project-filter reveal" role="group" aria-label="Project filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="research">Research</button>
-        <button class="filter-btn" data-filter="signal">Signal</button>
-        <button class="filter-btn" data-filter="hardware">Hardware</button>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all" data-en="All" data-ru="Все">All</button>
+        <button class="filter-btn" data-filter="research" data-en="Research" data-ru="Исследования">Research</button>
+        <button class="filter-btn" data-filter="signal" data-en="Signals" data-ru="Сигналы">Signals</button>
+        <button class="filter-btn" data-filter="hardware" data-en="Hardware" data-ru="Hardware">Hardware</button>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card reveal" data-category="research">
-          <div class="project-number">01</div>
-          <p class="project-type">Research · InSAR</p>
-          <h3>Ground deformation monitoring with Sentinel-1</h3>
-          <p>
-            A processing workflow for short-revisit SAR data: co-registration,
-            interferogram generation, topographic phase removal, unwrapping,
-            displacement estimation and terrain correction.
+      <div class="project-grid">
+        <article class="project-card reveal" data-category="research" data-project="insar">
+          <div class="project-topline"><span>01</span><span>Sentinel‑1 · InSAR</span></div>
+          <h3 data-en="Ground deformation monitoring in Almaty"
+              data-ru="Мониторинг деформаций поверхности в Алматы">
+            Ground deformation monitoring in Almaty
+          </h3>
+          <p data-en="A complete DInSAR workflow from SLC scenes to geocoded displacement maps, with coherence analysis and multi-pair comparison."
+             data-ru="Полный DInSAR-пайплайн от SLC-сцен до геокодированных карт смещений с анализом когерентности и сравнением нескольких пар.">
+            A complete DInSAR workflow from SLC scenes to geocoded displacement maps, with coherence analysis and multi-pair comparison.
           </p>
-          <div class="tags"><span>Sentinel-1</span><span>SNAP</span><span>InSAR</span></div>
+          <div class="tags"><span>SNAP</span><span>SNAPHU</span><span>GeoTIFF</span></div>
+          <button class="project-open" type="button" data-en="Open project →" data-ru="Открыть проект →">Open project →</button>
         </article>
 
-        <article class="project-card reveal" data-category="signal">
-          <div class="project-number">02</div>
-          <p class="project-type">Signal processing · Positioning</p>
-          <h3>2D-ESPRIT self-localization using satellite signals</h3>
-          <p>
-            AoA estimation with planar antenna arrays and multi-satellite
-            intersection for receiver position estimation using signals of opportunity.
+        <article class="project-card reveal" data-category="signal" data-project="esprit">
+          <div class="project-topline"><span>02</span><span>DSP · Positioning</span></div>
+          <h3 data-en="2D-ESPRIT self-localization using Iridium signals"
+              data-ru="Самолокализация на базе 2D‑ESPRIT по сигналам Iridium">
+            2D-ESPRIT self-localization using Iridium signals
+          </h3>
+          <p data-en="Planar-array AoA estimation and multi-satellite least-squares intersection using signals of opportunity."
+             data-ru="Оценка AoA на плоской антенной решётке и многоспутниковое LS-пересечение направлений по сигналам возможности.">
+            Planar-array AoA estimation and multi-satellite least-squares intersection using signals of opportunity.
           </p>
-          <div class="tags"><span>2D-ESPRIT</span><span>MATLAB</span><span>AoA</span></div>
+          <div class="tags"><span>2D‑ESPRIT</span><span>AoA</span><span>MATLAB</span></div>
+          <button class="project-open" type="button" data-en="Open project →" data-ru="Открыть проект →">Open project →</button>
         </article>
 
-        <article class="project-card reveal" data-category="hardware">
-          <div class="project-number">03</div>
-          <p class="project-type">Embedded systems · RF</p>
-          <h3>ESP32 + CC1101 RF experiments</h3>
-          <p>
-            A compact experimental platform combining an ESP32, CC1101, Wi-Fi/BLE,
-            local controls and logging for passive RF analysis and lab work.
+        <article class="project-card reveal" data-category="hardware" data-project="rf">
+          <div class="project-topline"><span>03</span><span>Embedded · RF</span></div>
+          <h3>ESP32 + CC1101 RF platform</h3>
+          <p data-en="An experimental embedded platform combining RF hardware, ESP32 control, Wi‑Fi/BLE interfaces and logging for laboratory work."
+             data-ru="Экспериментальная embedded-платформа, объединяющая RF-железо, управление на ESP32, Wi‑Fi/BLE-интерфейсы и журналирование для лабораторной работы.">
+            An experimental embedded platform combining RF hardware, ESP32 control, Wi‑Fi/BLE interfaces and logging for laboratory work.
           </p>
           <div class="tags"><span>ESP32</span><span>CC1101</span><span>Embedded</span></div>
+          <button class="project-open" type="button" data-en="Open project →" data-ru="Открыть проект →">Open project →</button>
         </article>
 
-        <article class="project-card reveal" data-category="research">
-          <div class="project-number">04</div>
-          <p class="project-type">Scientific communication</p>
-          <h3>Research publication & technical presentation</h3>
-          <p>
-            Preparation of scientific figures, workflows, conference material and
-            technical presentations around Sentinel-1 deformation monitoring.
+        <article class="project-card reveal" data-category="research" data-project="timeseries">
+          <div class="project-topline"><span>04</span><span>Time series · SAR</span></div>
+          <h3 data-en="Sentinel-1 time-series processing"
+              data-ru="Временные ряды Sentinel‑1">
+            Sentinel-1 time-series processing
+          </h3>
+          <p data-en="Transition from pair-based DInSAR toward multi-scene time-series analysis with short revisit intervals."
+             data-ru="Переход от парного DInSAR к многосценовому анализу временных рядов с короткими интервалами повторной съёмки.">
+            Transition from pair-based DInSAR toward multi-scene time-series analysis with short revisit intervals.
           </p>
-          <div class="tags"><span>Research</span><span>Writing</span><span>Visualization</span></div>
+          <div class="tags"><span>SBAS</span><span>PS‑InSAR</span><span>Sentinel‑1</span></div>
+          <button class="project-open" type="button" data-en="Open project →" data-ru="Открыть проект →">Open project →</button>
         </article>
       </div>
     </section>
 
-    <section id="experience" class="section section-grid">
+    <section id="publications" class="section section-split">
       <div class="section-heading reveal">
-        <p class="eyebrow">Experience</p>
-        <h2>Education and research trajectory.</h2>
+        <p class="eyebrow" data-en="Publications" data-ru="Публикации">Publications</p>
+        <h2 data-en="Research communication is part of the engineering work."
+            data-ru="Научная коммуникация — часть инженерной работы.">
+          Research communication is part of the engineering work.
+        </h2>
       </div>
+
+      <div class="publication-list reveal">
+        <article class="publication-card">
+          <div class="publication-meta">
+            <span data-en="Conference paper" data-ru="Конференционная статья">Conference paper</span>
+            <span>InSAR · Sentinel‑1</span>
+          </div>
+          <h3>SENTINEL-1-BASED INSAR ANALYSIS WITH A SHORT REVISIT INTERVAL FOR GROUND DEFORMATION MONITORING</h3>
+          <p data-en="Work focused on short-revisit Sentinel‑1 interferometry, coherence behavior, phase unwrapping and deformation interpretation."
+             data-ru="Работа посвящена Sentinel‑1 InSAR с коротким интервалом повторной съёмки, поведению когерентности, развёртке фазы и интерпретации деформаций.">
+            Work focused on short-revisit Sentinel‑1 interferometry, coherence behavior, phase unwrapping and deformation interpretation.
+          </p>
+        </article>
+
+        <div class="publication-note">
+          <span>+</span>
+          <p data-en="Future publications will extend the work toward multi-scene InSAR time series and intelligent near-real-time interpretation."
+             data-ru="Следующие публикации будут развивать работу в сторону многосценовых временных рядов InSAR и интеллектуальной интерпретации в режиме, близком к реальному времени.">
+            Future publications will extend the work toward multi-scene InSAR time series and intelligent near-real-time interpretation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Education" data-ru="Образование">Education</p>
+        <h2 data-en="Engineering education with an international research track."
+            data-ru="Инженерное образование с международной исследовательской траекторией.">
+          Engineering education with an international research track.
+        </h2>
+      </div>
+
       <div class="timeline reveal">
         <article class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Current</div>
-          <h3>Research in electronics & communication technologies</h3>
-          <p>Focus: intelligent InSAR analysis, near-real-time monitoring and signal/data processing.</p>
+          <div class="timeline-line"><span></span></div>
+          <div class="timeline-date">2026 —</div>
+          <div>
+            <h3 data-en="Doctoral research — Electronics & Communication Technologies"
+                data-ru="Докторантура — Электроника и коммуникационные технологии">
+              Doctoral research — Electronics & Communication Technologies
+            </h3>
+            <p data-en="Al-Farabi Kazakh National University · dual-degree research pathway with Northwestern Polytechnical University."
+               data-ru="Казахский национальный университет имени аль-Фараби · исследовательская траектория двойного диплома с Northwestern Polytechnical University.">
+              Al-Farabi Kazakh National University · dual-degree research pathway with Northwestern Polytechnical University.
+            </p>
+          </div>
         </article>
+
         <article class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2024–2026</div>
-          <h3>Master's studies / international research experience</h3>
-          <p>Work across communications, signal processing and Sentinel-1 InSAR research.</p>
+          <div class="timeline-line"><span></span></div>
+          <div class="timeline-date">2024 — 2026</div>
+          <div>
+            <h3 data-en="Master's — Electronics, Communication and Telecommunications"
+                data-ru="Магистратура — Электроника, связь и телекоммуникации">
+              Master's — Electronics, Communication and Telecommunications
+            </h3>
+            <p data-en="Al-Farabi Kazakh National University · international study and research experience at Northwestern Polytechnical University, Xi'an."
+               data-ru="КазНУ имени аль-Фараби · международная учёба и исследовательская работа в Northwestern Polytechnical University, Сиань.">
+              Al-Farabi Kazakh National University · international study and research experience at Northwestern Polytechnical University, Xi'an.
+            </p>
+          </div>
         </article>
+
         <article class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2020–2024</div>
-          <h3>Bachelor's studies</h3>
-          <p>Engineering background with technology, entrepreneurship and practical project work.</p>
+          <div class="timeline-line"><span></span></div>
+          <div class="timeline-date">2020 — 2024</div>
+          <div>
+            <h3 data-en="Bachelor's — Entrepreneurship in Engineering"
+                data-ru="Бакалавриат — Предпринимательство в инженерии">
+              Bachelor's — Entrepreneurship in Engineering
+            </h3>
+            <p data-en="Almaty University of Power Engineering and Telecommunications."
+               data-ru="Алматинский университет энергетики и связи.">
+              Almaty University of Power Engineering and Telecommunications.
+            </p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="process" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Process</p>
-        <h2>How I usually approach a technical problem.</h2>
+    <section id="stack" class="section">
+      <div class="section-heading wide reveal">
+        <p class="eyebrow" data-en="Technical stack" data-ru="Технический стек">Technical stack</p>
+        <h2 data-en="The tools I use across research, analysis and prototyping."
+            data-ru="Инструменты, которые я использую в исследованиях, анализе и прототипировании.">
+          The tools I use across research, analysis and prototyping.
+        </h2>
       </div>
-      <div class="process-grid">
-        <article class="process-card reveal"><span>01</span><h3>Define</h3><p>Turn the problem into measurable technical requirements.</p></article>
-        <article class="process-card reveal"><span>02</span><h3>Build</h3><p>Create the processing chain, prototype or experiment.</p></article>
-        <article class="process-card reveal"><span>03</span><h3>Validate</h3><p>Check assumptions against data, metrics and repeatable tests.</p></article>
-        <article class="process-card reveal"><span>04</span><h3>Explain</h3><p>Present the result so another person can reproduce and use it.</p></article>
+
+      <div class="stack-grid reveal">
+        <div><strong>Remote sensing</strong><span>Sentinel‑1 · SNAP · SNAPHU · InSAR · SBAS</span></div>
+        <div><strong>Signal processing</strong><span>MATLAB · Python · 2D‑ESPRIT · AoA · SDR</span></div>
+        <div><strong>Geospatial</strong><span>QGIS · GeoTIFF · ENU/ECEF · raster/vector workflows</span></div>
+        <div><strong>Embedded</strong><span>ESP32 · ESP8266 · Arduino · CC1101 · RF prototyping</span></div>
       </div>
     </section>
 
     <section id="contact" class="section contact-section">
       <div class="contact-card reveal">
-        <p class="eyebrow">Contact</p>
-        <h2>Have a research idea, engineering task or collaboration in mind?</h2>
-        <p>The easiest way to reach me is by email.</p>
+        <p class="eyebrow" data-en="Contact" data-ru="Контакты">Contact</p>
+        <h2 data-en="Research collaboration, engineering work or a technical discussion?"
+            data-ru="Исследовательское сотрудничество, инженерная задача или техническое обсуждение?">
+          Research collaboration, engineering work or a technical discussion?
+        </h2>
+        <p data-en="Email is the best way to reach me."
+           data-ru="Лучший способ связаться со мной — электронная почта.">
+          Email is the best way to reach me.
+        </p>
+
         <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:dinmukhamedassylbek@gmail.com">Send email</a>
-          <button class="btn btn-ghost" id="copyEmail" type="button">Copy email</button>
+          <a class="btn btn-primary" href="mailto:dinmukhamedassylbek@gmail.com">dinmukhamedassylbek@gmail.com</a>
+          <a class="btn btn-ghost" href="https://github.com/dinmukhamedassylbek-cmd" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <button class="btn btn-ghost" id="copyEmail" type="button" data-en="Copy email" data-ru="Скопировать email">Copy email</button>
         </div>
         <p class="copy-status" id="copyStatus" aria-live="polite"></p>
       </div>
@@ -270,10 +400,19 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Assylbek Dinmukhamed Kuanyshuly.</p>
-    <a href="#home">Back to top ↑</a>
+    <div>
+      <strong>Dinmukhamed Assylbek</strong>
+      <span data-en="Research & Engineering Portfolio" data-ru="Исследовательское и инженерное портфолио">Research & Engineering Portfolio</span>
+    </div>
+    <p>© <span id="year"></span></p>
+    <a href="#home" data-en="Back to top ↑" data-ru="Наверх ↑">Back to top ↑</a>
   </footer>
 
-  <script src="app.js"></script>
+  <dialog class="project-modal" id="projectModal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <script src="app.js?v=2.0"></script>
 </body>
 </html>
